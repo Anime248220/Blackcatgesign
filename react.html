@@ -24,47 +24,60 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
 
+    .header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-size: 25px;
+    }
     p {
-        margin-bottom: 20px;
-        font-size: 16px;
+      font-size: 16px;
+      margin: 20px;
     }
-
-
-
-    .prettyprint prettyprinted {
-
-        -webkit-font-smoothing: antialiased;
-        color: #000000;
-        text-transform: none;
-
-        visibility: visible;
-        box-sizing: border-box;
-        font: inherit;
-        vertical-align: baseline;
-        background: #f0f0f0;
-        line-height: 1.6;
-        max-width: 100%;
-        overflow: auto;
-        font-family: monospace;
-        font-size: 9pt;
-        border-radius: 8px;
-        background-color: #272822 !important;
-        border: 1px solid #272822 !important;
-        width: 95%;
-        margin: 1em auto;
-        padding: 1em;
-        margin-bottom: 0;
+    b{
+        font-size: 18px;
     }
+    .pixel {
+      text-align: center;
+    }
+    img {
+      border: 2px solid #ccc;
+    }
+    .pixel {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pixel img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 </style>
 
 
 <body>
-    <div class="jsx-1">
+    <div class="header">
         <h1>HOW TO REACT 101</h1>
-        <img class="img-jsx-1"
-            src="https://media.licdn.com/dms/image/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_600_2000/0/1672212317392?e=2147483647&v=beta&t=JYxutLOsSv6Cl9lBkfcZMqAmUIYYbnTgWtuZHrndvVU"
-            alt="">
+        <div class="pixel">
+            <img class="pixel"
+                src="https://media.licdn.com/dms/image/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_600_2000/0/1672212317392?e=2147483647&v=beta&t=JYxutLOsSv6Cl9lBkfcZMqAmUIYYbnTgWtuZHrndvVU"
+                alt="">
+
+        </div>
         <h2>React คืออะไร ?</h2>
         <p>React เป็น JavaScript library ที่ใช้สำหรับสร้าง user interface ที่ให้เราสามารถเขียนโค้ดในการสร้าง UI
             ที่มีความซับซ้อนแบ่งเป็นส่วนเล็กๆออกจากกันได้ ซึ่งแต่ละส่วนสามารถแยกการทำงานออกจากกันได้อย่างอิสระ
@@ -79,30 +92,46 @@
             <li>สร้างโปรเจ็กต์ใหม่ขึ้นมาด้วยคำสั่ง</li>
             <p class="npm-1">npx create-react-app myreact</p>
             <li>เราจะได้ไฟล์ต่างๆขึ้นมาประมาณนี้</li>
-            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-01-1024x601.jpg" alt="">
+            <div class="pixel">
+                <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-01-1024x601.jpg" alt="">
+
+            </div>
             <li>ลองรันด้วยคำสั่ง</li>
             <p class="npm-1">npm start</p>
-            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-02.jpg" alt="">
+            <div class="pixel">
+                <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-02.jpg" alt="">
+            </div>
             <p>เบราเซอร์จะเปิดขึ้นมาที่ <a href="http://localhost:3000/">http://localhost:3000/</a>
                 ถ้ามีหน้าตาแบบนี้แสดงว่าพร้อมใช้งานแล้ว</p>
-            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-03-1024x662.jpg" alt="">
+                <div class="pixel">
+                    <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-03-1024x662.jpg" alt="">
+
+                </div>
             <h2>ดูโค้ดที่ได้จาก Create-React-App กันก่อน</h2>
             <h3 style="border: 3px;">/Public/Index.Html</h3>
             <p>พอเป็นเว็บแล้วสิ่งที่ต้องนึกถึงอย่างแรกก็คือไฟล์ HTML ซึ่ง React เองเวลาที่ไปแสดงผลในเบราเซอร์ก็จะต้องมี
                 HTML เช่นกัน อย่างโค้ดที่สร้างจากคำสั่ง <b>create-react-app</b> ก็มีไฟล์ชื่อ index.html อยู่ในโฟลเดอร์
                 public อีกทีนึง</p>
-            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-04-1024x633.jpg" alt="">
-            <p>ซึ่งส่วนที่เราเราสนใจก็คือส่วนที่อยู่ใน
+                <div class="pixel">
+                    <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-04-1024x633.jpg" alt="">
 
+                </div>
+            <p>ซึ่งส่วนที่เราเราสนใจก็คือส่วนที่อยู่ใน
                 < body> เป็น < div id=”root”> เพราะว่าโค้ดที่เราจะลองเขียนกันในบทความนี้จะมาโผล่ใน div ตัวนี้นั่นเอง
             </p>
         </ul>
         <h2>Src/App.Js</h2>
         <p>ไฟล์นี้เหมือนเป็นไฟล์หลักที่ <b>create-react-app</b> สร้างขึ้นมาเหมือนกับเป็นไฟล์ main ของโปรแกรม ที่จะนำส่วนประกอบต่างๆมาใช้งานด้วยกันในไฟล์นี้</p>
-        <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-05-1024x633.jpg" alt="">
+        <div class="pixel">
+            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-05-1024x633.jpg" alt="">
+
+        </div>
         <h2>Src/Index.Js</h2>
         <p>อย่างที่เห็นว่าเรามีไฟล์ index.html ธรรมดาๆและไฟล์ App.js ที่เป็นเหมือน main ของโปรแกรมแล้ว ไฟล์ index.js นี้จะเป็นตัวเชื่อมระหว่างไฟล์ทั้งสองไฟล์</p>
-        <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-06-1024x633.jpg" alt="">
+        <div class="pixel">
+            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-06-1024x633.jpg" alt="">
+
+        </div>
 
         
 
