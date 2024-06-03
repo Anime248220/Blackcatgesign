@@ -29,6 +29,33 @@
         margin-bottom: 20px;
         font-size: 16px;
     }
+
+
+
+    .prettyprint prettyprinted {
+
+        -webkit-font-smoothing: antialiased;
+        color: #000000;
+        text-transform: none;
+
+        visibility: visible;
+        box-sizing: border-box;
+        font: inherit;
+        vertical-align: baseline;
+        background: #f0f0f0;
+        line-height: 1.6;
+        max-width: 100%;
+        overflow: auto;
+        font-family: monospace;
+        font-size: 9pt;
+        border-radius: 8px;
+        background-color: #272822 !important;
+        border: 1px solid #272822 !important;
+        width: 95%;
+        margin: 1em auto;
+        padding: 1em;
+        margin-bottom: 0;
+    }
 </style>
 
 
@@ -64,30 +91,20 @@
             <p>พอเป็นเว็บแล้วสิ่งที่ต้องนึกถึงอย่างแรกก็คือไฟล์ HTML ซึ่ง React เองเวลาที่ไปแสดงผลในเบราเซอร์ก็จะต้องมี
                 HTML เช่นกัน อย่างโค้ดที่สร้างจากคำสั่ง <b>create-react-app</b> ก็มีไฟล์ชื่อ index.html อยู่ในโฟลเดอร์
                 public อีกทีนึง</p>
-                <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-04-1024x633.jpg" alt="">
-                <p>ซึ่งส่วนที่เราเราสนใจก็คือส่วนที่อยู่ใน <body> เป็น <div id=”root”> เพราะว่าโค้ดที่เราจะลองเขียนกันในบทความนี้จะมาโผล่ใน div ตัวนี้นั่นเอง</p>
-                    <pre class="prettyprint prettyprinted" style=""><span class="tag">&lt;body&gt;</span><span class="pln">
-                    </span><span class="tag">&lt;noscript&gt;</span><span class="pln">You need to enable JavaScript to run this app.</span><span class="tag">&lt;/noscript&gt;</span><span class="pln">
-                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"root"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
-                    </span><span class="com">&lt;!--
-                      This HTML file is a template.
-                      If you open it directly in the browser, you will see an empty page.
-                
-                      You can add webfonts, meta tags, or analytics to this file.
-                      The build step will place the bundled scripts into the &lt;body&gt; tag.
-                
-                      To begin the development, run `npm start` or `yarn start`.
-                      To create a production bundle, use `npm run build` or `yarn build`.
-                    --&gt;</span><span class="pln">
-                  </span><span class="tag">&lt;/body&gt;</span></pre>
+            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-04-1024x633.jpg" alt="">
+            <p>ซึ่งส่วนที่เราเราสนใจก็คือส่วนที่อยู่ใน
 
-
-
-
-
-
+                < body> เป็น < div id=”root”> เพราะว่าโค้ดที่เราจะลองเขียนกันในบทความนี้จะมาโผล่ใน div ตัวนี้นั่นเอง
+            </p>
         </ul>
+        <h2>Src/App.Js</h2>
+        <p>ไฟล์นี้เหมือนเป็นไฟล์หลักที่ <b>create-react-app</b> สร้างขึ้นมาเหมือนกับเป็นไฟล์ main ของโปรแกรม ที่จะนำส่วนประกอบต่างๆมาใช้งานด้วยกันในไฟล์นี้</p>
+        <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-05-1024x633.jpg" alt="">
+        <h2>Src/Index.Js</h2>
+        <p>อย่างที่เห็นว่าเรามีไฟล์ index.html ธรรมดาๆและไฟล์ App.js ที่เป็นเหมือน main ของโปรแกรมแล้ว ไฟล์ index.js นี้จะเป็นตัวเชื่อมระหว่างไฟล์ทั้งสองไฟล์</p>
+        <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-06-1024x633.jpg" alt="">
 
+        
 
 
 
