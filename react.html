@@ -1,28 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    .jsx{
+    .jsx {
         display: block;
         text-align: center;
         align-items: center;
     }
-    .img-jsx-1{
-        width: 100%;      
+
+    .npm-1 {
+        margin: auto;
+        width: 50%;
+        border: 3px solid rgb(0, 0, 0);
+        padding: 10px;
+        background: #000;
+        color: rgb(131, 215, 248);
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
-
+    p {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
 </style>
+
+
 <body>
-    <div class="jsx-1"> 
+    <div class="jsx-1">
         <h1>HOW TO REACT 101</h1>
-        <img class="img-jsx-1" src="https://media.licdn.com/dms/image/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_600_2000/0/1672212317392?e=2147483647&v=beta&t=JYxutLOsSv6Cl9lBkfcZMqAmUIYYbnTgWtuZHrndvVU" alt="">
+        <img class="img-jsx-1"
+            src="https://media.licdn.com/dms/image/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_600_2000/0/1672212317392?e=2147483647&v=beta&t=JYxutLOsSv6Cl9lBkfcZMqAmUIYYbnTgWtuZHrndvVU"
+            alt="">
+        <h2>React คืออะไร ?</h2>
+        <p>React เป็น JavaScript library ที่ใช้สำหรับสร้าง user interface ที่ให้เราสามารถเขียนโค้ดในการสร้าง UI
+            ที่มีความซับซ้อนแบ่งเป็นส่วนเล็กๆออกจากกันได้ ซึ่งแต่ละส่วนสามารถแยกการทำงานออกจากกันได้อย่างอิสระ
+            และทำให้สามารถนำชิ้นส่วน UI เหล่านั้นไปใช้ซ้ำได้อีก</p>
+        <h2>เตรียมใช้งาน React</h2>
+        <ul>
+            <li>ติดตั้ง npm ไว้ในเครื่องให้เรียบร้อย เข้าไปดาวน์โหลดได้ลิงค์นี้ <a
+                    href="https://docs.npmjs.com/getting-started">https://www.npmjs.com/get-npm</a></li>
+            <li>เราจะสร้างโปรเจ็กต์เริ่มต้นขึ้นมาจากเครื่องมือที่ชื่อ create-react-app
+                ที่จะสร้างไฟล์พื้นฐานต่างๆที่จำเป็นในการเขียน React ขึ้นมา ให้ทำการติดตั้งด้วยคำสั่ง</li>
+            <p class="npm-1">npm install -g create-react-app</p>
+            <li>สร้างโปรเจ็กต์ใหม่ขึ้นมาด้วยคำสั่ง</li>
+            <p class="npm-1">npx create-react-app myreact</p>
+            <li>เราจะได้ไฟล์ต่างๆขึ้นมาประมาณนี้</li>
+            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-01-1024x601.jpg" alt="">
+            <li>ลองรันด้วยคำสั่ง</li>
+            <p class="npm-1">npm start</p>
+            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-02.jpg" alt="">
+            <p>เบราเซอร์จะเปิดขึ้นมาที่ <a href="http://localhost:3000/">http://localhost:3000/</a>
+                ถ้ามีหน้าตาแบบนี้แสดงว่าพร้อมใช้งานแล้ว</p>
+            <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-03-1024x662.jpg" alt="">
+            <h2>ดูโค้ดที่ได้จาก Create-React-App กันก่อน</h2>
+            <h3 style="border: 3px;">/Public/Index.Html</h3>
+            <p>พอเป็นเว็บแล้วสิ่งที่ต้องนึกถึงอย่างแรกก็คือไฟล์ HTML ซึ่ง React เองเวลาที่ไปแสดงผลในเบราเซอร์ก็จะต้องมี
+                HTML เช่นกัน อย่างโค้ดที่สร้างจากคำสั่ง <b>create-react-app</b> ก็มีไฟล์ชื่อ index.html อยู่ในโฟลเดอร์
+                public อีกทีนึง</p>
+                <img src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2020/07/react-04-1024x633.jpg" alt="">
+                <p>ซึ่งส่วนที่เราเราสนใจก็คือส่วนที่อยู่ใน <body> เป็น <div id=”root”> เพราะว่าโค้ดที่เราจะลองเขียนกันในบทความนี้จะมาโผล่ใน div ตัวนี้นั่นเอง</p>
+                    <pre class="prettyprint prettyprinted" style=""><span class="tag">&lt;body&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;noscript&gt;</span><span class="pln">You need to enable JavaScript to run this app.</span><span class="tag">&lt;/noscript&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"root"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+                    </span><span class="com">&lt;!--
+                      This HTML file is a template.
+                      If you open it directly in the browser, you will see an empty page.
+                
+                      You can add webfonts, meta tags, or analytics to this file.
+                      The build step will place the bundled scripts into the &lt;body&gt; tag.
+                
+                      To begin the development, run `npm start` or `yarn start`.
+                      To create a production bundle, use `npm run build` or `yarn build`.
+                    --&gt;</span><span class="pln">
+                  </span><span class="tag">&lt;/body&gt;</span></pre>
+
+
+
+
+
+
+        </ul>
+
+
 
 
     </div>
 </body>
+
 </html>
