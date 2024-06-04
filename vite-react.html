@@ -1,11 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vite</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://vitejs.dev/logo.svg" />
 </head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        background-color: #000;
+
+    }
+
+    .header {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color:#f0f0f0;
+    }
+h1{
+    color: rgb(253, 156, 0) ;
+}
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    b {
+        font-size: 18px;
+    }
+
+    .pixel {
+        text-align: center;
+    }
+
+    img {
+        border: 2px solid #ccc;
+    }
+
+    .pixel {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .pixel img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    a{
+        color: #ffd900;
+    }
+
+    a:hover {
+        color: rgb(253, 156, 0);
+    }
+
+   
+
+    .code-container {
+        position: relative;
+        background-color: #282c34;
+        padding: 20px;
+        border-radius: 5px;
+        overflow-x: auto;
+        color: #61dafb;
+    }
+
+    .code {
+        display: block;
+        background-color: #282c34;
+        padding: 10px;
+        border-radius: 5px;
+        white-space: pre-wrap;
+        width: 100%;
+        color: #f5d317;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .copy-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .copy-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<script>
+    function copyCode(id) {
+        const codeElement = document.getElementById(id);
+        // const codeSnippet = document.getElementById('codeSnippet2');
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = codeElement.innerText;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+    }
+
+</script>
+
 <body>
-    <h1>Hello vite</h1>
+    <div class="header">
+        <h1>ใช้ Vite สร้าง Project React </h1>
+        <img src="https://miro.medium.com/v2/resize:fit:600/1*ucL7YQ2v8aaOy426soLPZA.png" alt="">
+        <h2>ขั้นตอนการเตรียมตัวก่อนใช้งาน Vite</h2>
+        <p class="Step1"> <b>Step 1 : </b> ก่อนอื่นเราต้องติดตั้ง Node.js กันก่อน โดย version
+            ที่เราจะใช้ในบทความนี้จะเป็น <a href="https://nodejs.org/en">Node.js 18.16.0 LTS</a>คู่กับโปรแกรม<a
+                href="https://code.visualstudio.com/download">Visual Studio Code</a>ที่ใช้ในการเขียน Code นั่นเอง</p>
+        <p><b>Step 2 :</b> เมื่อทำการติดตั้งเสร็จแล้วให้เราทำการเปิดโฟลเดอร์หลักขึ้นมา (กดเมนูด้านบน File > Open Folder)
+            โดยเป็นโฟลเดอร์ที่เราจะสร้าง Project React ของเราได้เลย</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5d1dbc77-ead3-481d-a895-abff6c44a7c3%2FUntitled.png?id=ebdcf945-6dfd-4733-afa7-3afc08232d7a&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <div class="pixel"></div>
+        <p><b>Step 3 :</b> คลิกเมนู Terminal ด้านบน แล้วกด New Terminal (ใน Windows กด Ctrl + Shift + ` ได้เลย)</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5a00c4c0-bbd5-4f12-90bd-7209e4fd06b2%2FUntitled.png?id=fdff0316-40a5-4f87-8103-e691156c5ac2&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <div class="pixel"></div>
+        <p><b>Step 4 :</b> เมื่อได้หน้าต่าง Terminal มาแล้ว ให้พิมพ์คำสั่งเพื่อสร้างโปรเจกต์ตามนี้ได้เลยย </p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F87793194-c8ae-44a5-8a34-ffd592fd3039%2FUntitled.png?id=16a3df82-109e-4b78-8899-7fe121e70f1d&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <div class="pixel"></div>
+        <div class="code-container">
+            <code class="code" id="codeSnippet1">npm create vite@latest</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet1')">Copy</button>
+        </div>
+        <p>สำหรับใครที่ใช้ Mac หรือ ติดสิทธิ์ ตัว npm ไม่สามารถเขียนไฟล์ได้ ก็ใช้ sudo ด้านหน้า แล้วพิมพ์รหัสได้เลย</p>
+        <div class="code-container">
+            <code class="code" id="codeSnippet2">sudo npm create vite@latest</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet2')">Copy</button>
+        </div>
+        <p><b>Step 5 :</b> โปรแกรมจะทำการสร้างโปรเจกต์ให้เรา โดยจะถามว่าเป็น Package นี้ โอเคไหม ตรงนี้เราจะทราบชื่อรุ่น
+            กับ package ถ้าโอเค แค่เราก็กด y แล้ว enter ได้เลย</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc2845dbf-a7d8-4b60-bf55-55572305047e%2FUntitled.png?id=3c3b056e-0c25-4cee-bbc0-563b8645e5f9&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p><b>Step 6 :</b> ต่อมาเขาจะถามชื่อโปรเจกต์ (รวมถึงชื่อ Package) แล้วต่อมาจะถามว่าเราจะสร้าง Framework
+            (library)
+            อะไร ในที่นี้มี Vue และ Svelte ให้เลือกด้วย แต่ถ้าเราจะใช้ React ให้เลือกเป็น React ได้เลย</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fdb9876d7-0ba9-40fe-b50f-93e03c18db01%2FUntitled.png?id=6f7b722f-6335-4281-b7e5-81cefd9a0d02&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p><b>Step 7 :</b> ต่อมาเลือก Variant คือตัวภาษา กับ เครื่องมือต่าง ๆ ก็สามารถเลือกได้เลยว่าเราจะใช้ TypeScript
+            หรือ JavaScript ส่วน SWC ที่เป็นตัว Web Compiler จะเลือกหรือไม่ก็ได้ ขึ้นกับโปรเจกต์ของเรา</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F18b82237-739b-475e-9b18-3fbc43f41241%2FUntitled.png?id=36faec7e-eceb-45dc-ad03-f2af1dcbab73&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p><b>Step 8 :</b> เมื่อเรียบร้อยก็จะพบว่ามีโฟลเดอร์ของโปรเจกต์เราขึ้นมาในโฟลเดอร์โปรเจกต์ ให้เราทำการ Open
+            Folder ดังกล่าวที่ถูกสร้างขึ้นมาใหม่</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F66d99371-b3cb-48e3-ad71-545fcce88ce3%2FUntitled.png?id=32c625ec-5423-40be-add8-c00eb8ce8534&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p><b>Step 9 :</b> เมื่อเข้ามาเรียบร้อยจะอยู่ใน Path หลักลักษณะนี้</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fde395059-e6aa-485e-af09-6976daa88df7%2FUntitled.png?id=990fb1b4-ed4c-4207-993e-1baf24c66556&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p><b>Step 10 :</b> ให้เราเปิด Teriminal และ พิมพ์คำสั่ง</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4215cee-561b-42da-96ee-9e5091d72998%2FUntitled.png?id=4161b63c-a738-4897-a777-fe4327dac209&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p>สำหรับใน Windows และ ระบบทั่วไปที่ไม่ได้ติดสิทธิ์อะไร</p>
+        <div class="code-container">
+            <code class="code" id="codeSnippet3">npm install vite</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet3')">Copy</button>
+        </div>
+        <div class="code-container">
+            <code class="code" id="codeSnippet4">sudo npm install vite</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet4')">Copy</button>
+        </div>
+        <p><b>Step 11 :</b> เมื่อเรียบร้อยแล้ว ถือว่าเสร็จสิ้น ให้เราสามารถพิมพ์คำสั่ง เพื่อทำการ Run Web App
+            ของเราที่สร้างขึ้นได้เลย</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa9edf7e5-14ef-4d16-805f-fcd49e25fc73%2FUntitled.png?id=ee26d6c9-dc8c-4caa-847c-76538aba70a1&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p>สำหรับใน Windows และ ระบบทั่วไปที่ไม่ได้ติดสิทธิ์อะไร</p>
+        <div class="code-container">
+            <code class="code" id="codeSnippet5">npm run dev</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet5')">Copy</button>
+        </div>
+        <div class="code-container">
+            <code class="code" id="codeSnippet6">sudo npm run dev</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet6')">Copy</button>
+        </div>
+        <p>หากทุกอย่างเรียบร้อยจะขึ้นหน้าจอลักษณะนี้ ตัว Vite จะทำการสร้างตัวทดสอบเว็บเราใน Localhost ให้
+            โดยเราสามารถเข้าไปที่ลิงก์ดังกล่าวเพื่อทดสอบเว็บเราได้เลย</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fce36593d-f8d3-4b01-9a07-ccc8f34972cb%2FUntitled.png?id=d9f3b334-f25c-4a56-b64c-e238674affbf&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+        <p>
+            และ เมื่อทดสอบเรียบร้อยก็จะขึ้นมาในลักษณะนี้นั่นเองงง รวดเร็วจัดดด !! (ทั้งนี้หน้าตา Demo อาจจะขึ้นกับ Theme
+            ของ OS / Version ของ Vite และ React ที่อาจจะมีการเปลี่ยนแปลงในอนาคต) เราสามารถคลิกปุ่ม “count is 0”
+            เพื่อทดสอบการทำงานได้ด้วยนะ !</p>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6bc531a0-a121-4252-a229-a065d47c6bfb%2FUntitled.png?id=c831a466-884f-4380-9950-acf4e99e5e0d&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
+            alt="">
+
+
+    </div>
+
 </body>
+
 </html>
