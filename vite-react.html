@@ -10,112 +10,145 @@
 
 <style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 20px;
-        background-color: #000;
-
-    }
-
-    .header {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 50px;
-        border: 2px solid #000000;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        color:#f0f0f0;
-    }
-h1{
-    color: rgb(253, 156, 0) ;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-    h2 {
-        font-size: 25px;
-        color: #fff;
+
+.header {
+    padding: 20px;
+    background-color: #333;
+
+    max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.header p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.header .code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header .code {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.header .copy-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .pixel {
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+        color: #ffffff;
     }
 
-    p {
-        font-size: 16px;
-        margin: 20px;
-    }
-
-    b {
+    .header h2 {
         font-size: 18px;
+        color: #ffffff;
     }
 
-    .pixel {
-        text-align: center;
+    .header p {
+        font-size: 14px;
+        color: #ffffff;
     }
 
-    img {
-        border: 2px solid #ccc;
+    .header .code-container {
+        flex-direction: column;
     }
 
-    .pixel {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
+    .header .code {
+        margin-bottom: 10px;
+        margin-right: 0;
     }
 
-    .pixel img {
-        width: 100%;
-        height: auto;
-        display: block;
+    .header .copy-button {
+        padding: 8px;
     }
+}
 
-
-    a{
-        color: #ffd900;
-    }
-
-    a:hover {
-        color: rgb(253, 156, 0);
-    }
-
-   
-
-    .code-container {
-        position: relative;
-        background-color: #282c34;
-        padding: 20px;
-        border-radius: 5px;
-        overflow-x: auto;
-        color: #61dafb;
-    }
-
-    .code {
-        display: block;
-        background-color: #282c34;
+@media (max-width: 480px) {
+    .header {
         padding: 10px;
-        border-radius: 5px;
-        white-space: pre-wrap;
-        width: 100%;
-        color: #f5d317;
-        font-family: 'Courier New', Courier, monospace;
     }
 
-    .copy-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 5px 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
+    .header h1 {
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    .header h2 {
+        font-size: 16px;
+        color: #ffffff;
+    }
+
+    .header p {
+        font-size: 12px;
+        color: #ffffff;
+    }
+
+    .header .code-container {
+        flex-direction: column;
+    }
+
+    .header .code {
+        padding: 8px;
+    }
+
+    .header .copy-button {
+        padding: 8px;
         font-size: 12px;
     }
+}
 
-    .copy-button:hover {
-        background-color: #0056b3;
-    }
 </style>
 <script>
     function copyCode(id) {
         const codeElement = document.getElementById(id);
-        // const codeSnippet = document.getElementById('codeSnippet2');
         const tempTextArea = document.createElement('textarea');
         tempTextArea.value = codeElement.innerText;
         document.body.appendChild(tempTextArea);
@@ -132,8 +165,8 @@ h1{
         <img src="https://miro.medium.com/v2/resize:fit:600/1*ucL7YQ2v8aaOy426soLPZA.png" alt="">
         <h2 style="color: #fff;">ขั้นตอนการเตรียมตัวก่อนใช้งาน Vite</h2>
         <p class="Step1"> <b>Step 1 : </b> ก่อนอื่นเราต้องติดตั้ง Node.js กันก่อน โดย version
-            ที่เราจะใช้ในบทความนี้จะเป็น <a href="https://nodejs.org/en">Node.js 18.16.0 LTS</a>คู่กับโปรแกรม<a
-                href="https://code.visualstudio.com/download">Visual Studio Code</a>ที่ใช้ในการเขียน Code นั่นเอง</p>
+            ที่เราจะใช้ในบทความนี้จะเป็น <a href="https://nodejs.org/en" style="color: gold;">Node.js 18.16.0 LTS</a>คู่กับโปรแกรม<a
+                href="https://code.visualstudio.com/download" style="color: gold;">Visual Studio Code</a>ที่ใช้ในการเขียน Code นั่นเอง</p>
         <p><b>Step 2 :</b> เมื่อทำการติดตั้งเสร็จแล้วให้เราทำการเปิดโฟลเดอร์หลักขึ้นมา (กดเมนูด้านบน File > Open Folder)
             โดยเป็นโฟลเดอร์ที่เราจะสร้าง Project React ของเราได้เลย</p>
         <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5d1dbc77-ead3-481d-a895-abff6c44a7c3%2FUntitled.png?id=ebdcf945-6dfd-4733-afa7-3afc08232d7a&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
@@ -205,14 +238,11 @@ h1{
             โดยเราสามารถเข้าไปที่ลิงก์ดังกล่าวเพื่อทดสอบเว็บเราได้เลย</p>
         <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fce36593d-f8d3-4b01-9a07-ccc8f34972cb%2FUntitled.png?id=d9f3b334-f25c-4a56-b64c-e238674affbf&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
             alt="">
-        <p>
-            และ เมื่อทดสอบเรียบร้อยก็จะขึ้นมาในลักษณะนี้นั่นเองงง รวดเร็วจัดดด !! (ทั้งนี้หน้าตา Demo อาจจะขึ้นกับ Theme
+        <p>และ เมื่อทดสอบเรียบร้อยก็จะขึ้นมาในลักษณะนี้นั่นเองงง รวดเร็วจัดดด !! (ทั้งนี้หน้าตา Demo อาจจะขึ้นกับ Theme
             ของ OS / Version ของ Vite และ React ที่อาจจะมีการเปลี่ยนแปลงในอนาคต) เราสามารถคลิกปุ่ม “count is 0”
             เพื่อทดสอบการทำงานได้ด้วยนะ !</p>
         <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6bc531a0-a121-4252-a229-a065d47c6bfb%2FUntitled.png?id=c831a466-884f-4380-9950-acf4e99e5e0d&table=block&spaceId=48b354c3-efc8-4ec1-8d33-bf3488a7726c&width=500&userId=572059ca-1978-4e75-b8b7-62bd4f4aecb1&cache=v2"
             alt="">
-
-
     </div>
 
 </body>
