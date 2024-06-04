@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAn1BMVEX///9UxfgBV5sptvZOw/hmyvnd8v265fzY8P2lu9NBwfgATZYAUZjx+v77/f4ktfYAsfbn9v4uaqXR7f0BU5TM2OYARZMBUI4osO4AI0EAK0wBTYkBWJ0BR34BQXQGSHoBPm4EKkUANmA9aJEAP3wsY5kAQ3oGQ3EFPmgAPG4ANWIFNVgAL1cELk0AJ0kBP3AApOXM0tkANHoXYKC6y97IGlOJAAADcUlEQVR4nO3b63LSUBSGYUrSg2gPWCxbIJCi0gp49v6vzRDSGmiyj072WsvvuwAmz7wrk/5pr4dhGIZhGIZh5p2dh+w29uObdzFI/Tc4vYr9/MZdDE78l8oHxn5881AQBYkPBVGQ+ADUA3Gi0YeCKEh8KIiCxAegHogTjT4UREHiQ0EUJD4A9UCcaPShIAoSHwqiIPEBqAfiRKMPBVGQ+FAQBYkPQD0QJxp9KIiCxIeCKEh8AOqBONHoQ0EUJD4UREHiA1APxIlGHwqiIPGhIAoSH4B6IE40+lAQBYkPBVGQ+ADUA3Gi0YeCKEh8KIiCxAegHvifn+jlWdAoAPUFh+kgZEMCQP2PD9M04MdPLgkATQVDgCkFoP7HUZA+UP/jAHYAvJJ+okENORQMIvIoGEDkUtCbyOFDH0TkVNCLyOcd9CRyK+hM5Ah0IvI7UUciz4IORK4FrYl8C1oSeX3oPYi8C1oQOb+DVkRjwYQ+UEs0Aq+vE/pADdF4ogUw8SV2CGwl2hRMfImdAluIdgU9iR0DG4m2Bb2InQMbiPYFPYgdfOhf7ohoLHhTBzoSIxTc7YDoVtCRGAl4QHR5B52J0YA1og/QmhgR+Ex0P1EHYlRgRfQraEmMDCyJvgWtiNGBO6J3QQsiAWBB9C9oJEb50Dvu+EPvRCRR0DBTQS1RCrCVKAfYQpQEbCTKAjYQpQFfEOUBj4gSgQdEGR96DVFmwRpRLrAiSgaWRNnAgsgBeBYATJJT+sDe7U0AUH2I/fg2CyCqxcdP9P/xJIS4WI3fvBVMVAVw1BdM3AP7colqkZVAscSngmKJBXA6ehJKJKqHOlAgcQcc14XSiBWwLpRFVA/zEngglERUj5+zBqEc4h7YIJRCLIHNQhlE9bhetQolENVmPf8rFEhUm22+ykphc0TuRPVlm8/1Qt7EArjMyyNtvVLeRHX/dbl+btgq5EtU9++3NeHxX238iQVwUgrnWXmmrT6uxB2wEu5exFF/1g5kSSyBpfDbPBv39T6OxD1wslku82xk0nEkVsDJdj6ezayAzIgVMJ/a6rgRS+B6anz32BIL4DLrO+XjRfw+ycfuOE7EHz/Hmm+7COK7O28giGQGIogg0hiIIIJIYyCCCCKNgQgiiDQGIohMiK/9d/eLBfFVyH7HfnwMwzAMwzDsn+wPbQGkKIZ+27AAAAAASUVORK5CYII="
+    />
+</head>
+
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 16px;
+      margin: 20px;
+    }
+    b {
+      font-size: 18px;
+    }
+    .pixel {
+      text-align: center;
+    }
+    img {
+      border: 2px solid #ccc;
+    }
+    .pixel {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pixel img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .code-container {
+            position: relative;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .code {
+            display: block;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap; /* เพื่อให้การแสดงผลไม่ถูกตัด */
+            width: 100%;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+<script>
+    function copyCode(id) {
+        const codeElement = document.getElementById(id);
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = codeElement.innerText;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+    }
+</script>
+
+<body>
+
+    <div class="header">
+        <h2>Flutter คืออะไร</h2>
+        <p>Flutter เป็นเฟรมเวิร์กโอเพ่นซอร์สที่พัฒนาและสนับสนุนโดย Google นักพัฒนาฟรอนท์เอนด์และฟูลสแตกใช้ Flutter เพื่อสร้างอินเทอร์เฟซผู้ใช้ (UI) ของแอปพลิเคชันสำหรับหลายแพลตฟอร์มด้วยฐานรหัสเดียว</p>
+        <p>เมื่อ Flutter เปิดตัวในปี 2018 รองรับการพัฒนาแอพมือถือเป็นหลัก ตอนนี้ Flutter พร้อมรองรับการพัฒนาแอปพลิเคชันบน 6 แพลตฟอร์มดังนี้: iOS Android เว็บ Windows MacOS และ Linux</p>
+        
+        <div class="pixel">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*A7MrOAPcertvtPXJPrP8Lw.png" alt="">
+        </div>
+
+        <h2>Flutter ช่วยพัฒนาแอพอย่างไร</h2>
+        <p>Flutter ช่วยลดความยุ่งยากในกระบวนการสร้าง UI ที่สอดคล้องกันและน่าสนใจสำหรับแอปพลิเคชันในหกแพลตฟอร์มที่รองรับ</p>
+        <p>เนื่องจาก Flutter เป็นเฟรมเวิร์กการพัฒนาข้ามแพลตฟอร์ม อันดับแรกเราจะเปรียบเทียบกับการพัฒนาแบบเนทีฟ จากนั้น เราสามารถเน้นคุณสมบัติที่เป็นเอกลักษณ์ของ Flutter</p>
+
+        <b>การพัฒนาแอพเนทีฟเทียบกับการพัฒนาแอพข้ามแพลตฟอร์ม</b>
+        <p>Flutter ช่วยลดความยุ่งยากในกระบวนการสร้าง UI ที่สอดคล้องกันและน่าสนใจสำหรับแอปพลิเคชันในหกแพลตฟอร์มที่รองรับ</p>
+        <p>เนื่องจาก Flutter เป็นเฟรมเวิร์กการพัฒนาข้ามแพลตฟอร์ม อันดับแรกเราจะเปรียบเทียบกับการพัฒนาแบบเนทีฟ จากนั้น เราสามารถเน้นคุณสมบัติที่เป็นเอกลักษณ์ของ Flutter</p>
+
+        <b>การพัฒนาแอพเนทีฟเทียบกับการพัฒนาแอพข้ามแพลตฟอร์ม</b>
+        <p>การเข้ารหัสแอปพลิเคชันสำหรับแพลตฟอร์มเฉพาะ เช่น iOS เรียกว่าการพัฒนาแอปแบบเนทีฟ ในทางตรงกันข้าม การพัฒนาแอปข้ามแพลตฟอร์มกำลังสร้างแอปพลิเคชันสำหรับหลายแพลตฟอร์มด้วยโค้ดเบสเดียว</p>
+
+        <div class="pixel">
+            <img src="https://androidthai.in.th/images/Workshop/Flutter_15nov/Screen-Shot-2561-11-15-at-11.44.17.png" alt="">
+        </div>
+
+        <b>ข้อดีของ Flutter</b>
+        <p>ต่อไปนี้คือบางวิธีที่ Flutter โดดเด่นในฐานะเฟรมเวิร์กการพัฒนาข้ามแพลตฟอร์ม</p>
+        <ul>
+            <li><b>ประสิทธิภาพใกล้เคียงกับเจ้าของภาษา</b> Flutter ใช้ภาษาการเขียนโปรแกรม Dart และคอมไพล์เป็นรหัสเครื่อง อุปกรณ์โฮสต์เข้าใจรหัสนี้ ซึ่งทำให้มั่นใจได้ถึงประสิทธิภาพที่รวดเร็วและมีประสิทธิภาพ</li>
+            <li><b>การเรนเดอร์ที่รวดเร็ว สม่ำเสมอ และปรับแต่งได้ </b>แทนที่จะใช้เครื่องมือแสดงผลเฉพาะแพลตฟอร์ม Flutter ใช้ไลบรารีกราฟิกโอเพนซอร์ซของ Google เพื่อแสดงผล UI สิ่งนี้ทำให้ผู้ใช้มีภาพที่สอดคล้องกันไม่ว่าพวกเขาจะใช้แพลตฟอร์มใดในการเข้าถึงแอปพลิเคชันก็ตาม </li>
+            <li><b>เครื่องมือที่เป็นมิตรกับนักพัฒนา</b> Google สร้าง Flutter โดยเน้นที่ความง่ายในการใช้งาน ด้วยเครื่องมืออย่าง hot reload นักพัฒนาสามารถดูตัวอย่างการเปลี่ยนแปลงโค้ดได้โดยไม่สูญเสียสถานะ เครื่องมืออื่นๆ เช่น เครื่องมือตรวจสอบวิดเจ็ตช่วยให้เห็นภาพและแก้ไขปัญหาด้วยเลย์เอาต์ UI ได้ง่าย</li>
+        </ul>
+        <div class="pixel">
+            <img src="https://weomni.com/wp-content/uploads/2023/07/Flutter_1200x800_Cover.png" alt="">
+        </div>
+
+        <h2>การติดตั้ง Flutter บน Windows</h2>
+        <b>1. ดาวน์โหลด Flutter SDK:</b>
+        <ul>
+            <li>ไปที่ หน้าเว็บ Flutter และดาวน์โหลดไฟล์ zip ของ Flutter SDK</li>
+            <li>แตกไฟล์ zip ไปยังไดเรกทอรีที่คุณต้องการติดตั้ง Flutter (เช่น C:\src\flutter)</li>
+            <div class="code-container">
+                <code class="code" id="codeSnippet1">tar xf flutter_linux_<version>-stable.tar.xz</code>
+                <button class="copy-button" onclick="copyCode('codeSnippet1')">Copy</button>
+            </div>
+        </ul>
+
+        <h2>2. ตั้งค่า PATH:</h2>
+        <ul>
+            <li>เพิ่ม Flutter SDK ใน PATH โดยการเปิด Control Panel แล้วไปที่ System and Security -> System -> Advanced system settings -> Environment Variables</li>
+            <li>เพิ่มไดเรกทอรี flutter\bin ใน System Variables -> Path</li>
+            <div class="code-container">
+                <code class="code" id="codeSnippet2">export PATH="$PATH:`pwd`/flutter/bin"</code>
+                <button class="copy-button" onclick="copyCode('codeSnippet2')">Copy</button>
+            </div>
+        </ul>
+
+        <h2>ติดตั้งเครื่องมือเพิ่มเติม:</h2>
+        <ul>
+            <li>ติดตั้งเครื่องมือพัฒนาที่จำเป็น:</li>
+            <div class="code-container">
+                <code class="code" id="codeSnippet3">sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev
+                </code>
+                <button class="copy-button" onclick="copyCode('codeSnippet3')">Copy</button>
+            </div>
+        </ul>
+
+
+
+    </div>
+    
+</body>
+</html>
