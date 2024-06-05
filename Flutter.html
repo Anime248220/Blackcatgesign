@@ -84,6 +84,9 @@
         .copy-button:hover {
             background-color: #0056b3;
         }
+        .abc{
+            margin: 20px;
+        }
     </style>
 
 
@@ -138,6 +141,9 @@
 
         <h2>การติดตั้ง Flutter บน Windows</h2>
         <b>1. ดาวน์โหลด Flutter SDK:</b>
+        <div class="pixel">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*RkpnIhbwqwFDyKJ1v7p4TA.jpeg" alt="">
+        </div>
         <ul>
             <li>ไปที่ หน้าเว็บ Flutter และดาวน์โหลดไฟล์ zip ของ Flutter SDK</li>
             <li>แตกไฟล์ zip ไปยังไดเรกทอรีที่คุณต้องการติดตั้ง Flutter (เช่น C:\src\flutter)</li>
@@ -148,9 +154,12 @@
         </ul>
 
         <h2>2. ตั้งค่า PATH:</h2>
+        <div class="pixel">
+            <img src="https://www.c-sharpcorner.com/UploadFile/Tutorial/admin/setup-flutter-in-windows28082019105608/Images/Setup%20Flutter%20In%20Windows3.gif" alt="">
+        </div>
         <ul>
-            <li>เพิ่ม Flutter SDK ใน PATH โดยการเปิด Control Panel แล้วไปที่ System and Security -> System -> Advanced system settings -> Environment Variables</li>
-            <li>เพิ่มไดเรกทอรี flutter\bin ใน System Variables -> Path</li>
+            <li>เพิ่ม Flutter SDK ใน PATH โดยการเปิด Control Panel แล้วไปที่ System and Security > System > Advanced system settings > Environment Variables</li>
+            <li>เพิ่มไดเรกทอรี flutter\bin ใน System Variables > Path</li>
             <div class="code-container">
                 <code class="code" id="codeSnippet2">export PATH="$PATH:`pwd`/flutter/bin"</code>
                 <button class="copy-button" onclick="copyCode('codeSnippet2')">Copy</button>
@@ -165,7 +174,28 @@
                 </code>
                 <button class="copy-button" onclick="copyCode('codeSnippet3')">Copy</button>
             </div>
+            <li>ติดตั้ง Android Studio และตั้งค่า Android SDK:</li>
+            <div class="abc">
+                <li>ดาวน์โหลดและติดตั้ง <a href="https://developer.android.com/studio" style="color: dodgerblue;">Android Studio</a> </li>
+                <li>เปิด Android Studio แล้วทำตามขั้นตอนการติดตั้ง Android SDK, Android SDK Platform-Tools, และ Android SDK Build-Tools</li>
+                <li>ตั้งค่า Android Emulator และ/หรือเชื่อมต่ออุปกรณ์ Android จริง</li>
+            </div>
         </ul>
+
+        <h2>ติดตั้งปลั๊กอินใน IDE:</h2>
+        <ul>
+            <li>ใน Android Studio ไปที่ File -> Settings -> Plugins แล้วค้นหาและติดตั้ง Flutter และ Dart plugins</li>
+            <li>ทำการรีสตาร์ท Android Studio</li>
+        </ul>
+
+        <h2>ตรวจสอบการติดตั้ง:</h2>
+        <ul>
+            <li>เปิด Terminal แล้วรันคำสั่ง flutter doctor</li>
+            <li>flutter doctor จะตรวจสอบการติดตั้งและแจ้งเตือนหากมีอะไรที่ต้องการติดตั้งเพิ่มเติม</li>
+        </ul>
+
+        <p>หลังจากทำตามขั้นตอนเหล่านี้แล้ว คุณจะสามารถเริ่มพัฒนาแอปพลิเคชันด้วย Flutter ได้แล้ว</p>
+
 
 
 
