@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 16px;
+      margin: 20px;
+    }
+    b {
+      font-size: 18px;
+    }
+    .pixel {
+      text-align: center;
+    }
+    img {
+      border: 2px solid #ccc;
+    }
+    .pixel {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pixel img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(10px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: calc(100% - 40px);
+  }
+}
+
+.container {
+  position: relative; /* ตั้งค่าตำแหน่งของ container เป็น relative */
+  width: 300px; /* กำหนดขนาดของ container */
+  height: 200px;
+}
+
+.image {
+  position: absolute; /* ตั้งค่าตำแหน่งของภาพเป็น absolute เพื่อให้สามารถจัดตำแหน่งได้ */
+}
+
+.image1 {
+  top: 0;
+  left: 0;
+  z-index: 1; /* กำหนดค่า z-index เพื่อตำแหน่งซ้อนของภาพ */
+}
+
+.image2 {
+  top: 20px;
+  left: 20px;
+  z-index: 2; /* ภาพนี้จะอยู่ด้านบนของภาพ image1 */
+}
+.code-container {
+            position: relative;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .code {
+            display: block;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap; /* เพื่อให้การแสดงผลไม่ถูกตัด */
+            width: 100%;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+
+<script>
+    function copyCode(id) {
+        const codeElement = document.getElementById(id);
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = codeElement.innerText;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+    }
+</script>
+
+<body>
+    
+    <div class="header">
+        <h1>เรียนรู้การเขียนโปรแกรม Javascript สำหรับมือใหม่</h1>
+
+        <h2>เริ่มต้นติดตั้ง Angular ง่ายๆ</h2>
+
+        <div class="pixel">
+            <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*Yfepd1hyNO6pWRGx" alt="">
+        </div>
+    </div>
+        <p>Angular เป็น framework ที่ได้รับความนิยมในการพัฒนา front-end โดยในปัจจุบันตัว Angular นั้น มี featuresใหม่ๆ ทั้ง command-line และ ตัว framework เอง</p>
+        <p>ในบทความนี้ จะเป็นการสอนแบบ Step by Step เพื่อสร้างเว็บแอฟขึ้นมา</p>
+        <p>เตรียมพร้อมก่อน dev</p>
+
+        <ul>
+            <li>ความรู้เบื้องต้น <a href="https://medium.com/tech-inno/%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99-typescript-%E0%B9%83%E0%B8%99-5-%E0%B8%99%E0%B8%B2%E0%B8%97%E0%B8%B5-34a8f48241a0">TypeScript</a></li>
+            <li>Node.js package manager <a href="https://nodejs.org/en/download/package-manager">(ดาวน์โหลด)</a></li>
+        </ul>
+
+        <br>
+        <p>ถ้าพร้อมแล้วเริ่มกันเลย</p>
+
+        <h2>STEP 1 ติดตั้ง Angular CLI</h2>
+        <p>เริ่มด้วยการติดตั้ง Angular CLI version ล่าสุด โดยการรันคำสั่งในterminal :</p>
+        <div class="code-container">
+            <code class="code" id="codeSnippet1">npm install -g @angular/cli</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet1')">Copy</button>
+        </div>
+        <h2>ตรวจสอบ version ด้วยคำสั่ง</h2>
+        <div class="code-container">
+            <code class="code" id="codeSnippet2">npm install -g @angular/cli</code>
+            <button class="copy-button" onclick="copyCode('codeSnippet2')">Copy</button>
+        </div>
+          
+
+
+
+    </div>
+     
+</body>
+</html>
