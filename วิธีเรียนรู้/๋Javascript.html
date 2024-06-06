@@ -161,40 +161,85 @@ body {
     
     <div class="header">
         <h1>เรียนรู้การเขียนโปรแกรม Javascript สำหรับมือใหม่</h1>
+        <p>การเรียนรู้ JavaScript สำหรับมือใหม่สามารถเริ่มต้นได้อย่างง่ายดายด้วยการทำความเข้าใจพื้นฐานและการฝึกฝนการเขียนโค้ดจริง ๆ นี่คือคำแนะนำและขั้นตอนเบื้องต้นที่คุณสามารถทำตามได้:</p>
 
-        <h2>เริ่มต้นติดตั้ง Angular ง่ายๆ</h2>
-
-        <div class="pixel">
-            <div class="card">
-            <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*Yfepd1hyNO6pWRGx" alt="">
-        </div>
-    </div>
-        <p>Angular เป็น framework ที่ได้รับความนิยมในการพัฒนา front-end โดยในปัจจุบันตัว Angular นั้น มี featuresใหม่ๆ ทั้ง command-line และ ตัว framework เอง</p>
-        <p>ในบทความนี้ จะเป็นการสอนแบบ Step by Step เพื่อสร้างเว็บแอฟขึ้นมา</p>
-        <p>เตรียมพร้อมก่อน dev</p>
-
+        <h2>1. ทำความเข้าใจพื้นฐาน</h2>
+        <p>เริ่มต้นด้วยการทำความเข้าใจพื้นฐานของ JavaScript และวิธีการทำงานของมันในเว็บเพจ:</p>
         <ul>
-            <li>ความรู้เบื้องต้น <a href="https://medium.com/tech-inno/%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99-typescript-%E0%B9%83%E0%B8%99-5-%E0%B8%99%E0%B8%B2%E0%B8%97%E0%B8%B5-34a8f48241a0">TypeScript</a></li>
-            <li>Node.js package manager <a href="https://nodejs.org/en/download/package-manager">(ดาวน์โหลด)</a></li>
+          <li>HTML และ CSS: เรียนรู้พื้นฐานของ HTML และ CSS เพื่อเข้าใจโครงสร้างและการสไตล์ของเว็บเพจ.</li>
+          <li>การฝัง JavaScript: เรียนรู้วิธีการฝัง JavaScript ใน HTML ผ่านทาง script แท็ก.</li>
         </ul>
 
-        <br>
-        <p>ถ้าพร้อมแล้วเริ่มกันเลย</p>
+        <h2>2. เรียนรู้ Syntax พื้นฐาน</h2>
+        <p>ศึกษาพื้นฐานของ JavaScript syntax:</p>
+        <ul>
+          <li>การประกาศตัวแปร: ใช้ let, const, และ var.</li>
+          <li>ชนิดข้อมูล: ตัวเลข, สตริง, บูลีน, ออบเจ็กต์, และอาร์เรย์.</li>
+          <li>โอเปอเรเตอร์: การบวก, ลบ, คูณ, หาร, และโอเปอเรเตอร์เชิงตรรกะ.</li>
+          <li>การควบคุมการทำงาน: if, else, switch, และการลูป (for, while).</li>
+        </ul>
+        <h2>3. ทำความเข้าใจฟังก์ชัน</h2>
+        <p>เรียนรู้เกี่ยวกับฟังก์ชัน:</p>
+        <ul>
+          <li>การประกาศและการเรียกใช้ฟังก์ชัน.</li>
+          <li>พารามิเตอร์และค่าที่คืนกลับ.</li>
+          <li>ฟังก์ชันแสดงออก (Function Expressions) และฟังก์ชันลูกศร (Arrow Functions).</li>
+        </ul>
 
-        <h2>STEP 1 ติดตั้ง Angular CLI</h2>
-        <p>เริ่มด้วยการติดตั้ง Angular CLI version ล่าสุด โดยการรันคำสั่งในterminal :</p>
-        <div class="code-container">
-            <code class="code" id="codeSnippet1">npm install -g @angular/cli</code>
-            <button class="copy-button" onclick="copyCode('codeSnippet1')">Copy</button>
-        </div>
-        <h2>ตรวจสอบ version ด้วยคำสั่ง</h2>
-        <div class="code-container">
-            <code class="code" id="codeSnippet2">npm install -g @angular/cli</code>
-            <button class="copy-button" onclick="copyCode('codeSnippet2')">Copy</button>
-        </div>
-          
+        <h2>4. การทำงานกับ DOM</h2>
+        <p>เรียนรู้วิธีการใช้ JavaScript เพื่อทำงานกับ DOM (Document Object Model):</p>
+        <ul>
+          <li>การเลือกและการเปลี่ยนแปลงองค์ประกอบ: getElementById, querySelector.</li>
+          <li>การจัดการเหตุการณ์ (Event Handling): addEventListener.</li>
+          <li>การเปลี่ยนแปลงเนื้อหาและสไตล์ขององค์ประกอบ.</li>
+        </ul>
+
+        <h2>5. การทำงานกับอาเรย์และออบเจ็กต์</h2>
+        <p>ทำความเข้าใจการทำงานกับข้อมูลในรูปแบบอาเรย์และออบเจ็กต์:</p>
+        <ul>
+          <li>การเพิ่ม, ลบ, และปรับปรุงข้อมูลในอาเรย์.</li>
+          <li>การเข้าถึงและจัดการคุณสมบัติของออบเจ็กต์.</li>
+        </ul>
+
+        <h2>6. ฝึกฝนการเขียนโปรแกรมเชิงวัตถุ (OOP)</h2>
+        <p>ทำความเข้าใจแนวคิดของการเขียนโปรแกรมเชิงวัตถุใน JavaScript:</p>
+        <ul>
+          <li>การสร้างคลาสและออบเจ็กต์.</li>
+          <li>การสืบทอด (Inheritance).</li>
+        </ul>
+
+        <h2>7. เรียนรู้การเขียนโปรแกรมแบบอะซิงโครนัส</h2>
+        <p>ทำความเข้าใจวิธีการจัดการกับการทำงานอะซิงโครนัส:</p>
+        <ul>
+          <li>Callback functions.</li>
+          <li>Promises.</li>
+          <li>Async/Await.</li>
+        </ul>
+
+        <h2>8. ฝึกฝนโดยการทำโปรเจกต์เล็ก ๆ</h2>
+        <p>ลองทำโปรเจกต์เล็ก ๆ เพื่อฝึกฝนทักษะ:</p>
+        <ul>
+          <li>สร้างเครื่องคิดเลข.</li>
+          <li>สร้างแอปพลิเคชันบันทึกงาน (To-Do List).</li>
+          <li>ทำแอนิเมชันเล็ก ๆ บนเว็บเพจ.</li>
+        </ul>
+
+        <h2>แหล่งเรียนรู้เพิ่มเติม</h2>
+        <ul>
+          <li>ไปยัง: <a href="../js.html">JavaScript Guide</a></li>
+        </ul>
+
+        
 
 
+
+
+
+
+
+
+
+        
 
     </div>
      
